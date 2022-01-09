@@ -95,6 +95,7 @@ const css = (id, styles) => {
   }
 };
 
-css('.a', {
+css(['.a','#b'], {
   color: "red",
+  fontSize:'2rem'
 });
