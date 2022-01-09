@@ -1,11 +1,14 @@
 const css = (id, styles) => {
   if (Array.isArray(id)) {
-
     id.map((e) => {
       let elementStyle;
 
       if (e[0] === "#") {
-        elementStyle = document.getElementById(e.slice(1)).style;
+        try {
+          elementStyle = document.getElementById(e.slice(1)).style;
+        } catch (error) {
+          console.warn(`cannot find the elements with provided id: ${e}`);
+        }
 
         const style = Object.keys(styles).map((entry) => {
           return [entry, styles[entry]];
@@ -18,7 +21,9 @@ const css = (id, styles) => {
           elementStyle[attribute] = value;
         });
       } else if (e[0] === ".") {
-        const elementsArray = document.getElementsByClassName(e.slice(1));
+       
+         const elementsArray = document.getElementsByClassName(e.slice(1));
+        
 
         const style = Object.keys(styles).map((entry) => {
           return [entry, styles[entry]];
@@ -95,7 +100,7 @@ const css = (id, styles) => {
   }
 };
 
-css(['.a','#b'], {
+css(["#a"], {
   color: "red",
-  fontSize:'2rem'
+  fontSize: "2rem",
 });
