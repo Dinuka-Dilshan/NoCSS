@@ -1,5 +1,5 @@
 # NoCSS
-A JavaScript function to write CSS for DOM elements using JavaScript
+A JavaScript function to write CSS for DOM elements
 
 
 ## How To Use
