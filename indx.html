@@ -9,8 +9,32 @@
   <body>
     <p class="a">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
     <p id="b">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    <p class="c">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p class="class">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+    <p class="a">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p id="b">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p class="class">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+    <p class="a">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p id="b">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <p class="class">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
 
-    <script src="./noCss.js"></script>
+    <script src="./v2.js"></script>
+    <script>
+      css({
+        class: {
+          color: "red",
+          fontSize: "2rem",
+        },
+        '#b': {
+          color: "green",
+          fontSize: "2rem",
+        },
+      });
+    </script>
   </body>
 </html>

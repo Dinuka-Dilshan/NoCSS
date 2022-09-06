@@ -4,25 +4,23 @@ A JavaScript function to write CSS for DOM elements
 
 ## How To Use
 
-Function take two arguments. first one can be an array of strings or a string. Second one takes an object. use CSS properties and the values to style the selected elements.
+Function takes one object as the argument. object keys should be the element selectors and the values should be an object consist of CSS properties and the values.
 
  Target elements using classes 
  
 
-    css('.className', {color: "red",fontSize:"2rem"});
+    css({
+      className:{
+        color: "red",
+        fontSize:"2rem"
+      },
+      '#id':{
+        color: "red",
+        fontSize:"2rem"
+      }
+    });
 
-  Target elements using Id
-
-    css('#id', {color: "red"});
-
-  Target elements using html tags
   
-
-    css('tagName', {color: "red"});
-
-Target multiple elements 
-
-    css(['.className','#Id'], {color: "red"});
 
 
  
